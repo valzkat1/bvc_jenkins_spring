@@ -1,6 +1,6 @@
 node {
     stage ('Clone the project'){
-    step('Git Clone'){
+    steps{
       git 'https://github.com/valzkat1/bvc_jenkins_spring.git'
     }
 }
