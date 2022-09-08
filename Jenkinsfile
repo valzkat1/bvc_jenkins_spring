@@ -2,13 +2,13 @@ pipeline {
   agent { label 'contextLoads'}  
   
   	stages {
-  		stage('test'){
+  		stage('Test'){
   			steps {
   			   sh "mvn clean compile test"
   			}
   		
   		}
-  		stage ('Build application'){
+  		stage ('Build'){
   			steps {
   				echo "mvn clean install -Dmaven.test.skip=true"
   			}
