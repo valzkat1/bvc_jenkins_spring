@@ -1,16 +1,29 @@
-# challenge_bvc_BackEnd
- Aplicacion Spring Boot Java 11 con el api Rest de Eventos digitales
+## Spring Jenkins
 
-# Infraestructura
-El motor de base de datos seleccionado para la implementacion es PostgreSQL  y para la infraestructura del despliegue se creo una cuenta nueva 
-bajo la capa Free tier de AWS ec2. Sobre la cual se hace la instalacion del Motor postreSQL, Java 11 y Tomcat 9 
+This module contains articles about Spring with Jenkins
 
+### Relevant articles
 
+- [Intro to Jenkins 2 and the Power of Pipelines](https://www.baeldung.com/ops/jenkins-pipelines)
 
+## Basic CRUD API with Spring Boot
 
-## Prueba del Api de almacenamiento de Eventos
+This is the code of a simple API for some CRUD operations build using Spring Boot.
 
-Se implemento tambien un formulario en el FrontEnd para la creacion de eventos digitales que envia los datos al api Rest creado con Spring Boot
+### Requirements
 
+- Maven
+- JDK 8
+- MongoDB
 
+### Running
+To build and start the server simply type
 
+```bash
+$ mvn clean install
+$ mvn spring-boot:run -Dserver.port=8989
+```
+
+Now with default configurations it will be available at: [http://localhost:8080](http://localhost:8080)
+
+Enjoy it :)
