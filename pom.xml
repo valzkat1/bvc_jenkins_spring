@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>spring-jenkins-pipeline</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-jenkins-pipeline</name>
-    <packaging>jar</packaging>
+    <name>spring-jenkins</name>
+    <packaging>war</packaging>
     <description>Intro to Jenkins 2 and the power of pipelines</description>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
