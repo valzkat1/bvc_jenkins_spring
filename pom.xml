@@ -8,13 +8,13 @@
     <name>spring-jenkins-pipeline</name>
     <packaging>jar</packaging>
     <description>Intro to Jenkins 2 and the power of pipelines</description>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.6.11</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
 
-    <parent>
-        <groupId>com.baeldung</groupId>
-        <artifactId>parent-boot-2</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../parent-boot-2</relativePath>
-    </parent>
 
     <dependencies>
         <dependency>

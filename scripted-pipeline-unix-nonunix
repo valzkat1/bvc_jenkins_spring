@@ -1,8 +1,8 @@
 node {
     stage 'Clone the project'
-    git 'https://github.com/eugenp/tutorials.git'
+    git 'https://github.com/valzkat1/bvc_jenkins_spring.git'
 
-    dir('spring-jenkins-pipeline') {
+    dir('bvc_jenkins_spring') {
         stage("Compilation and Analysis") {
             parallel 'Compilation': {
                 if (isUnix()) {
