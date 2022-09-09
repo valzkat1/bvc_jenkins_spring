@@ -17,7 +17,7 @@ node {
                     if (isUnix()) {
                         sh "./mvnw checkstyle:checkstyle"
                     } else {
-                        bat "./mvnw.cmd checkstyle:checkstyle"
+                        bat "/mvnw.cmd checkstyle:checkstyle"
                     }
                      step([$class: 'CheckStylePublisher',
                           canRunOnFailed: true,
