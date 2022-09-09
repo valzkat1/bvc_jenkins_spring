@@ -10,14 +10,14 @@ node {
                 if (isUnix()) {
                     sh "./mvnw clean install -DskipTests"
                 } else {
-                    bat "/mvnw.cmd clean install -DskipTests"
+                    bat "mvnw.cmd clean install -DskipTests"
                 }
             }, 'Static Analysis': {
                 stage("Checkstyle") {
                     if (isUnix()) {
                         sh "./mvnw checkstyle:checkstyle"
                     } else {
-                        bat "/mvnw.cmd checkstyle:checkstyle"
+                        bat "mvnw.cmd checkstyle:checkstyle"
                     }
                      step([$class: 'CheckStylePublisher',
                           canRunOnFailed: true,
@@ -38,7 +38,7 @@ node {
                         if (isUnix()) {
                             sh "./mvnw test -Punit"
                         } else {
-                            bat "/mvnw.cmd test -Punit"
+                            bat "mvnw.cmd test -Punit"
                         }
                     } catch(err) {
                         step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*UnitTest.xml'])
@@ -53,7 +53,7 @@ node {
                         if (isUnix()) {
                             sh "./mvnw test -Pintegration"
                         } else {
-                            bat "/mvnw.cmd test -Pintegration"
+                            bat "mvnw.cmd test -Pintegration"
                         }
                     } catch(err) {
                         step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*IntegrationTest.xml'])
