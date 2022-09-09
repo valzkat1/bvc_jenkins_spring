@@ -12,7 +12,8 @@ node {
                 } else {
                     bat "mvnw.cmd clean install -DskipTests"
                 }
-            }, 'Static Analysis': {
+            }
+            /*, 'Static Analysis': {
                 stage("Checkstyle") {
                     if (isUnix()) {
                         sh "./mvnw checkstyle:checkstyle"
@@ -28,7 +29,7 @@ node {
                           useStableBuildAsReference: true
                         ])
                 }
-            }
+            }*/
         }
 
         stage("Tests and Deployment") {
