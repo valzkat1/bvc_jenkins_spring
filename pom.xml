@@ -69,13 +69,15 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
-                            <excludes>
+                          <!--  <excludes>
                                 <exclude>**/*IntegrationTest.java</exclude>
                                 <exclude>**/*IntTest.java</exclude>
                             </excludes>
-                            <!-- Run only tests whose name end with "UnitTest" -->
+                             Run only tests whose name end with "UnitTest" -->
                             <includes>
                                 <include>**/*UnitTest.java</include>
+                                <include>**/*IntegrationTest.java</include>
+                                <include>**/*IntTest.java</include>
                             </includes>
                         </configuration>
                     </plugin>
