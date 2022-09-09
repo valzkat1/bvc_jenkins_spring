@@ -4,7 +4,7 @@ node {
       git 'https://github.com/valzkat1/bvc_jenkins_spring.git'
     
 }
-    dir('jenkins_spring') {
+  //  dir('jenkins_spring') {
         stage("Compilation and Analysis") {
             parallel 'Compilation': {
                 if (isUnix()) {
@@ -79,5 +79,5 @@ node {
                 }
             }
         }
-    }
+    //}
 }
